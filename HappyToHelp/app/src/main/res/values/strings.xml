@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">HappyToHelp</string>
+
+    <string name="dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using  making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for  will uncover many web sites still in their infancy.</string>
+
+    <string name="about_info">Mr. Abhinandan Upadhye started HAPPY TO HELP SERVICES on 5 February 2013.First step was to provide Passport Assistance service.\nIn very short span of time, we won the trust of our customers with excellent, instant and doorstep Passport service.After few months, we entered into four main service domain :- \n
+&#8226; Life Insurance\n
+&#8226; Mutual Funds\n
+&#8226; Health Insurance\n
+&#8226; General Insurance\n\nDue to this Happy To Help service expanded and also customer family grew.\nCustomer satisfaction became our obsession.</string>
+
+    <string name="passport_info">An Indian passport is a passport issued by the Ministry of External Affairs of the Republic of India to Indian citizens for the purpose of international travel.\nThe Passports Act of 1967 states that the passport attests to the holder\'s citizenship through birth or naturalisation in India. It enables the bearer to travel internationally and serves as proof of Indian citizenship as per the Passports Act (1967).
+    \n\nWe are giving all passport services from last 10 years and assisted 6000 plus passports.\n\n
+    We provide passport service for\n
+ &#8226; Fresh\n
+ &#8226; Renewal\n
+ &#8226; Tatkal\n
+ &#8226; Kids\n
+ &#8226; Lost\n
+ &#8226; Damaged\n
+ &#8226; PCC</string>
+    <string name="mutual_fund_text">Mutual fund\t</string>
+    <string name="sip_text">Systematic Investment Plan (SIP)\t</string>
+    <string name="mutual_fund_info"> is a collective pool of money contributed by several investors and managed by a professional Fund Manager. \n\nMutual Funds in India are established in the form of a Trust under Indian Trust Act, 1882, in accordance with SEBI (Mutual Funds) Regulations, 1996.\n\n</string>
+    <string name="sip_info">  is an investment route offered by Mutual Funds wherein one can invest a fixed amount in a Mutual Fund scheme at regular intervals– say once a month or once a quarter, instead of making a lump-sum investment.\nThe installment amount could be as little as INR 500 a month and is similar to a recurring deposit.</string>
+
+
+    <string name="notification_channel_id">99</string>
+
+</resources>

@@ -1,13 +1,26 @@
 package com.example.happytohelp.screens
 
-import android.app.*
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Card
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.runtime.Composable
@@ -18,6 +31,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -27,27 +41,42 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.example.happytohelp.R
-import com.example.happytohelp.detailscreens.*
+import com.example.happytohelp.detailscreens.AboutDetailScreen
+import com.example.happytohelp.detailscreens.CriticalCareInsuranceDetailScreen
+import com.example.happytohelp.detailscreens.HealthInsuranceDetailScreen
+import com.example.happytohelp.detailscreens.MutualFundDetailScreen
+import com.example.happytohelp.detailscreens.PassportDetailScreen
+import com.example.happytohelp.detailscreens.SIPCalculatorScreen
+import com.example.happytohelp.detailscreens.TermInsuranceDetailScreen
+import com.example.happytohelp.detailscreens.VehicleInsuranceDetailScreen
+import com.example.happytohelp.detailscreens.WealthManagementDetailScreen
 import com.example.happytohelp.screens.Screens.GRAPH_DETAIL
-import com.example.happytohelp.ui.theme.GreenOriginal
 import com.example.happytohelp.ui.theme.HappyToHelpTheme
 
 
 @Composable
 fun HomeAppBar(title: String, image: ImageVector, iconClick: () -> Unit) {
-    TopAppBar(
-        title = { Text(title) },
-        /*navigationIcon = {
+    Image(
+        modifier = Modifier
+            .fillMaxWidth(),
+        painter = painterResource(id = R.drawable.h2h_toolbar),
+        contentDescription = "Happy To Help Services",
+        contentScale = ContentScale.FillWidth
+
+    )
+    /* TopAppBar(
+         title = { Text(title) },
+         *//*navigationIcon = {
             Icon(painter = painterResource(id = R.mipmap.ic_launcher), contentDescription = "Home",
                 modifier = Modifier
                     .padding(horizontal = 10.dp)
                     .clickable { iconClick.invoke() })
-        },*/
+        },*//*
 
         backgroundColor = MaterialTheme.colors.GreenOriginal,
         contentColor = Color.White,
         elevation = 12.dp,
-        /*  actions = {
+        *//*  actions = {
               Text(
                   text = "Marathi",
                   modifier = Modifier
@@ -58,9 +87,9 @@ fun HomeAppBar(title: String, image: ImageVector, iconClick: () -> Unit) {
                   color = Color.Black
               )
 
-          }*/
+          }*//*
 
-    )
+    )*/
 }
 
 @Composable
@@ -93,21 +122,27 @@ fun ServiceList(navController: NavHostController?, paddingValues: PaddingValues)
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
+                            .verticalScroll(rememberScrollState())
                     ) {
                         MenuCard(
                             R.drawable.indian_passports,
-                            "Passport Service",
-                            "New/renewal"
+                            stringResource(id = R.string.passport_service_text),
+                            stringResource(id = R.string.passport_service_subtext),
                         ) { navController!!.navigate(Screens.PassportDetail) }
                         MenuCard(
                             R.drawable.health_insurance,
-                            "Health Insurance",
-                            "Protect Yourself"
+                            stringResource(id = R.string.health_insurance_text),
+                            stringResource(id = R.string.health_insurance_subtext)
                         ) { navController!!.navigate(Screens.HealthINCDetail) }
                         MenuCard(
+                            R.drawable.critical_illness,
+                            stringResource(id = R.string.critical_illness_text),
+                            stringResource(id = R.string.critical_illness_subtext)
+                        ) { navController!!.navigate(Screens.CriticalIllnessINCDetail) }
+                        MenuCard(
                             R.drawable.mutual_funds,
-                            "Mutual Funds",
-                            "Earn on Savings"
+                            stringResource(id = R.string.mutual_fund_text),
+                            stringResource(id = R.string.mutual_funds_subtext)
                         )
                         { navController!!.navigate(Screens.MutualFundDetail) }
                         /*MenuCard(
@@ -117,13 +152,13 @@ fun ServiceList(navController: NavHostController?, paddingValues: PaddingValues)
                         ) { navController!!.navigate(Screens.VehicleINCDetail) }*/
                         MenuCard(
                             R.drawable.term_insurance,
-                            "Term Insurance",
-                            "Life Cover"
+                            stringResource(id = R.string.term_insurance_text),
+                            stringResource(id = R.string.term_insurance_subtext)
                         ) { navController!!.navigate(Screens.TermINCDetail) }
                         MenuCard(
                             R.drawable.wealth_manage,
-                            "Financial Management",
-                            "Plan Your Future"
+                            stringResource(id = R.string.financial_management_text),
+                            stringResource(id = R.string.financial_management_subtext)
                         )
                         { navController!!.navigate(Screens.WealthManDetail) }
                     }
@@ -195,6 +230,10 @@ fun NavGraphBuilder.homeDetailNavigationGraph(homeNavController: NavHostControll
 
         composable(route = Screens.HealthINCDetail) {
             HealthInsuranceDetailScreen(navController = homeNavController)
+        }
+
+        composable(route = Screens.CriticalIllnessINCDetail) {
+            CriticalCareInsuranceDetailScreen(navController = homeNavController)
         }
 
         composable(route = Screens.MutualFundDetail) {

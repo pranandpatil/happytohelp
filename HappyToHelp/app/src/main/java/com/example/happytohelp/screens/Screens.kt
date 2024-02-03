@@ -19,6 +19,7 @@ object Screens {
     const val TermINCDetail = "term_inc_detail"
     const val WealthManDetail = "wealth_man_detail"
     const val HealthINCDetail = "health_inc_detail"
+    const val CriticalIllnessINCDetail = "critical_illness_inc_detail"
 
     const val SIPCalculator = "sip_Calculator"
 

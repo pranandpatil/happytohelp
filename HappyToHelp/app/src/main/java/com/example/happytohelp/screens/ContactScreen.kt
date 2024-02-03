@@ -7,7 +7,15 @@ import android.net.Uri
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -145,7 +153,13 @@ fun ContactScreen(navController: NavController?, paddingValues: PaddingValues) {
                         start = 16.dp,
                         end = 16.dp,
                         bottom = 16.dp
-                    ),
+                    ).clickable {
+                       // val mapIntentUri = Uri.parse("google.navigation:q="+destintationLatitude+","+destintationLongitude + "&mode=b")
+                        val mapIntentUri = Uri.parse("geo:16.847284,74.589764");
+                        val mapIntent = Intent(Intent.ACTION_VIEW, mapIntentUri)
+                        mapIntent.setPackage("com.google.android.apps.maps")
+                        context.startActivity(mapIntent)
+                    },
                     fontSize = 18.sp,
                     fontFamily = FontFamily.SansSerif,
                     fontStyle = FontStyle.Normal

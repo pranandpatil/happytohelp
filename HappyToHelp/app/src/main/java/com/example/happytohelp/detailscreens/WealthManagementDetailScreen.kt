@@ -2,8 +2,17 @@ package com.example.happytohelp.detailscreens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.OutlinedButton
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.runtime.Composable
@@ -11,6 +20,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
@@ -46,7 +56,7 @@ fun WealthManagementDetailScreen(navController: NavController?) {
                 ) {
                     Box() {
                         Text(
-                            text = "We provide passport service for\n Fresh\n Renewal\n Tatkal\n Kids\n Lost\n Damaged\n PCC",
+                            text = "COMING SOON...",
                             color = Color.Black,
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -61,9 +71,10 @@ fun WealthManagementDetailScreen(navController: NavController?) {
                         modifier = Modifier
                             .align(alignment = Alignment.CenterHorizontally)
                             .padding(top = 16.dp, start = 16.dp, end = 16.dp, bottom = 5.dp)
-                            .fillMaxWidth(),
+                            .fillMaxWidth().alpha(0f),
                         colors = ButtonDefaults.buttonColors(Color.White),
-                        border = BorderStroke(2.dp, MaterialTheme.colors.GreenOriginal)
+                        border = BorderStroke(2.dp, MaterialTheme.colors.GreenOriginal),
+                        enabled = false
                     ) {
                         Text(
                             "ENQUIRE", fontSize = 18.sp,

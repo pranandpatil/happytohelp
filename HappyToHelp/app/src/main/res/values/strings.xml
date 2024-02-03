@@ -1,6 +1,24 @@
 <resources>
     <string name="app_name">HappyToHelp</string>
 
+    <string name="passport_service_text">Passport Service</string>
+    <string name="passport_service_subtext">New/renewal</string>
+
+    <string name="health_insurance_text">Health Insurance</string>
+    <string name="health_insurance_subtext">Protect Yourself</string>
+
+    <string name="critical_illness_text">Critical Illness Insurance</string>
+    <string name="critical_illness_subtext">For Critical Illness</string>
+
+    <string name="mutual_funds_text">Mutual Funds</string>
+    <string name="mutual_funds_subtext">Earn on Savings</string>
+
+    <string name="term_insurance_text">Term Insurance</string>
+    <string name="term_insurance_subtext">Life Cover</string>
+
+    <string name="financial_management_text">Financial Management</string>
+    <string name="financial_management_subtext">Plan Your Future</string>
+
     <string name="dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using  making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for  will uncover many web sites still in their infancy.</string>
 
@@ -20,6 +38,12 @@
  &#8226; Lost\n
  &#8226; Damaged\n
  &#8226; PCC</string>
+    <string name="health_insurance_info">Health insurance is a type of insurance that covers medical expenses that arise due to an illness. These expenses could be related to hospitalisation costs, cost of medicines or doctor consultation fees.\n\nWe provide health insurance service of below companies -</string>
+
+    <string name="critical_illness_insurance_info">Critical Illness Insurance covers serious and long-term illness that require an expensive medical treatment. Most health insurance plans provide critical illness rider cover on payment of additional premium that helps the insured pay for exorbitant hospitalization and treatment expenses.\n\nWe provide critical illness insurance service of below companies -</string>
+
+    <string name="term_insurance_info">Term insurance is a life insurance product, which offers financial coverage to the policyholder for a specific time period. In case of death of the insured individual during the policy term, the death benefit is paid by the company to the beneficiary.\n\nWe provide term insurance service of below companies -</string>
+
     <string name="mutual_fund_text">Mutual fund\t</string>
     <string name="sip_text">Systematic Investment Plan (SIP)\t</string>
     <string name="mutual_fund_info"> is a collective pool of money contributed by several investors and managed by a professional Fund Manager. \n\nMutual Funds in India are established in the form of a Trust under Indian Trust Act, 1882, in accordance with SEBI (Mutual Funds) Regulations, 1996.\n\n</string>

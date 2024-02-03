@@ -5,15 +5,15 @@ plugins {
 }
 
 android {
-    namespace 'com.example.happytohelp'
+    namespace 'ap.service.happytohelp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.happytohelp"
+        applicationId "ap.service.happytohelp"
         minSdk 24
         targetSdk 33
         versionCode 1
-        versionName "1.0"
+        versionName "0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
